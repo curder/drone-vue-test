@@ -22,8 +22,8 @@ steps:
         from_secret: rsync_user
     settings:
       hosts:
-        - "drone-vue-stage.webfsd.com"
-      source: ./dist
+        - drone-vue-stage.webfsd.com
+      source: ./dist/*
       target: /var/www/codes/temp/drone-vue-stage.webfsd.com
       include:
         - "**.*"
