@@ -13,23 +13,23 @@ steps:
       - yarn install
       - yarn run build
 
-  - name: scp
-    image: appleboy/drone-scp
+  # http://plugins.drone.io/drillster/drone-rsync/
+  - name: rsync
+    image: drillster/drone-rsync
     group: vue
     environment:
+      SSH_KEY:
+        from_secret: ssh_key
       STAGE_TARGET:
         from_secret: stage_target
-    settings:
-      host:
-        - drone-vue-stage.webfsd.com
-      username: deployer
-      key:
-        from_secret: ssh_key
-      port: 22
-      command_timeout: 2m
-      target: ${STAGE_TARGET}
-      source:
-        - dist/*
+    hosts: ["drone-vue-stage.webfsd.com"]
+    key: ${SSH_KEY}
+    source: ./dist
+    target: ${STAGE_TARGET}
+    include: ["**.*"]
+    exclude: ["**.*"]
+    script:
+      - cd ${STAGE_TARGET} && ls -la
 
   - name: dingtalk-notify
     image: lddsb/drone-dingtalk-message
