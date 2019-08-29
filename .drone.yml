@@ -25,13 +25,13 @@ steps:
         - "drone-vue-stage.webfsd.com"
       key: ${SSH_KEY}
       source: ./dist
-      target: ${STAGE_TARGET}
+      target: /var/www/codes/temp/drone-vue-stage.webfsd.com
       include:
         - "**.*"
       exclude:
         - "**.*"
       script:
-        - cd ${STAGE_TARGET} && ls -la
+        - cd /var/www/codes/temp/drone-vue-stage.webfsd.com && ls -la
 
   - name: dingtalk-notify
     image: lddsb/drone-dingtalk-message
