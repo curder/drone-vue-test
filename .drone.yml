@@ -12,6 +12,11 @@ steps:
       - yarn install
       - yarn run build
 
+  - name: code_style
+    image: node:10.16
+    commands:
+      - yarn lint
+
   # http://plugins.drone.io/drillster/drone-rsync/
   - name: rsync
     image: drillster/drone-rsync
