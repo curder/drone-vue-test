@@ -16,12 +16,12 @@ steps:
   - name: scp
     image: appleboy/drone-scp
     group: vue
+    environment:
+      STAGE_TARGET:
+        from_secret: stage_target
     settings:
       host:
         - drone-vue-stage.webfsd.com
-      environment:
-        STAGE_TARGET:
-          from_secret: stage_target
       username: deployer
       key:
         from_secret: ssh_key
