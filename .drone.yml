@@ -11,7 +11,7 @@ steps:
       - yarn --version
       - yarn config set cache-folder .yarn-cache
       - yarn install
-      - yarn run production
+      - yarn run build
 
   - name: scp
     image: appleboy/drone-scp
