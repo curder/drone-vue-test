@@ -20,7 +20,8 @@ steps:
         from_secret: ssh_key
       STAGE_TARGET:
         from_secret: stage_target
-    hosts: ["drone-vue-stage.webfsd.com"]
+    hosts:
+      - "drone-vue-stage.webfsd.com"
     key: ${SSH_KEY}
     source: ./dist
     target: ${STAGE_TARGET}
