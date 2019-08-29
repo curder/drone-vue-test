@@ -20,11 +20,12 @@ steps:
         from_secret: rsync_key
       RSYNC_USER:
         from_secret: rsync_user
+      PLUGIN_TARGET:
+        from_secret: rsync_target
     settings:
       hosts:
         - drone-vue-stage.webfsd.com
       source: ./dist/*
-      target: /var/www/codes/temp/drone-vue-stage.webfsd.com
       include:
         - "**.*"
       exclude:
