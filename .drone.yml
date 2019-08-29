@@ -4,7 +4,7 @@ name: default
 steps:
   - name: npm
     image: node:10.16
-    group: laravel
+    group: vue
     commands:
       - node -v
       - npm -v
@@ -13,8 +13,9 @@ steps:
       - yarn install
       - yarn run production
 
-   scp:
+  - name: scp
     image: appleboy/drone-scp
+    group: vue
     settings:
       host:
         - drone-vue-stage.webfsd.com
