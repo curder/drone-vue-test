@@ -1,5 +1,10 @@
 <template>
-  <div id="app">Drone ❤️ CI / CD</div>
+  <div id="app">
+    <section>
+      <div>Drone ❤️ CI / CD</div>
+      <small style="font-size:12px;">2019-08-29</small>
+    </section>
+  </div>
 </template>
 
 <script>
