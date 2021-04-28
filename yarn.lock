@@ -3530,6 +3530,11 @@ fast-levenshtein@~2.0.6:
   resolved "https://registry.npm.taobao.org/fast-levenshtein/download/fast-levenshtein-2.0.6.tgz#3d8a5c66883a16a30ca8643e851f19baa7797917"
   integrity sha1-PYpcZog6FqMMqGQ+hR8Zuqd5eRc=
 
+fast-xml-parser@^3.19.0:
+  version "3.19.0"
+  resolved "https://registry.npm.taobao.org/fast-xml-parser/download/fast-xml-parser-3.19.0.tgz#cb637ec3f3999f51406dd8ff0e6fc4d83e520d01"
+  integrity sha1-y2N+w/OZn1FAbdj/Dm/E2D5SDQE=
+
 fastparse@^1.1.2:
   version "1.1.2"
   resolved "https://registry.npm.taobao.org/fastparse/download/fastparse-1.1.2.tgz#91728c5a5942eced8531283c79441ee4122c35a9"
@@ -4715,6 +4720,13 @@ is-svg@^3.0.0:
   integrity sha1-kyHb0pwhLlypnE+peUxxS8r6L3U=
   dependencies:
     html-comment-regex "^1.1.0"
+
+is-svg@^4.2:
+  version "4.3.1"
+  resolved "https://registry.npm.taobao.org/is-svg/download/is-svg-4.3.1.tgz#8c63ec8c67c8c7f0a8de0a71c8c7d58eccf4406b"
+  integrity sha1-jGPsjGfIx/Co3gpxyMfVjsz0QGs=
+  dependencies:
+    fast-xml-parser "^3.19.0"
 
 is-symbol@^1.0.2, is-symbol@^1.0.3:
   version "1.0.3"
